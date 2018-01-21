@@ -72,6 +72,10 @@ nav {
   padding: 0.75rem 0;
 }
 
+.mobile-nav {                 /* Turns off navigation menu for mobile devices */
+  display: none;
+}
+
 .header.bottom a {
   color: White;
   text-decoration: none;
@@ -87,18 +91,18 @@ nav {
 }
 
 .body.top-row img {
-  border: 4px solid black;
+  display: block;            /* These 3 lines of code will center the image */
+  margin-left: auto;
+  margin-right: auto;
   height: 9rem;
+  width: 9rem;
   padding: 2rem;
-}
-
-.pen {
-  background-size: 9rem;
 }
 
 .top-row.left,
 .top-row.middle,
 .top-row.right {
+  border: 4px solid black;
   display: flex;
   flex-flow: column;
   width: 30%;
@@ -107,6 +111,8 @@ nav {
 .body.top-row h4 {
   background-color: Black;
   padding: 0.5rem 0;
+  /* margin-left: -0.02rem;
+  margin-right: -0.02rem; */
   text-align: center;
 }
 
@@ -152,4 +158,47 @@ footer {
 
   display: flex;
   align-items: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px){
+
+  .top-row.left,
+  .top-row.right {
+    display: flex;
+    flex-flow: column;
+    width: 47%;
+  }
+
+  .top-row.middle {            /* Turns off middle picture with watch */
+    display: none;
+  }
+
+  nav {                        /* Turns off navigation menu for desktop */
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0;
+  }
+
+  /* Modifying text size for mobile devices */
+
+  .black-container h2 {
+    font-size: 1rem;
+  }
+
+  .header.top h2,
+  .header.bottom,
+  .black-container h3,
+  .top-row h4,
+  .bottom-row h4,
+  .bottom-row h3,
+  footer {
+    font-size: 0.77rem;
+  }
+
 }
