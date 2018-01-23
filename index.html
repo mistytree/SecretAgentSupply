@@ -46,17 +46,25 @@
       <div class="body top-row">
 
         <div class="top-row left">
-          <img src="./resources/img/pen.png" alt="Black Pen"> <!-- -->
+          <!-- Has to nest <img> in <div> element otherwise, when styling border
+          around image directly it is a bit off of the following <h4> tag -->
+          <div class="top-row black-border">
+            <img src="./resources/img/pen.png" alt="Black Pen">
+          </div>
           <h4>Exploding Pen</h4>
         </div>
 
         <div class="top-row middle">
-          <img src="./resources/img/watch.png" alt="Wrist Watch">
+          <div class="top-row black-border">
+            <img src="./resources/img/watch.png" alt="Wrist Watch">
+          </div>
           <h4>Cellular Watch</h4>
         </div>
 
         <div class="top-row right">
-          <img src="./resources/img/glasses.png" alt="Black Sun Glasses">
+          <div class="top-row black-border">
+            <img src="./resources/img/glasses.png" alt="Black Sun Glasses">
+          </div>
           <h4>Thermal Glasses</h4>
         </div>
 

@@ -42,15 +42,14 @@ body {
   background: Black;
   width: 20rem;
   height: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 3rem;
+  padding: 2rem 0 2rem 3rem;
   margin-left: 0.5rem;
 }
 
 .black-container h2 {
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.2;          /* Amount of space used for line (like line spacing in MS Word) */
 }
 
 .black-container h3 {
@@ -102,12 +101,15 @@ nav {
 .top-row.left,
 .top-row.middle,
 .top-row.right {
-  border: 4px solid black;
   margin: 0;
   display: flex;
   flex-flow: column;
   width: 30%;
 }
+
+.top-row.black-border {      /* To draw black border around image; has to be */
+  border: 4px solid black;   /* a separate class because if border drawn around */
+}                            /* .top-row.left/middle/right classes, it is a bit off */
 
 .body.top-row h4 {
   background-color: Black;
@@ -121,16 +123,12 @@ nav {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 4rem;
+  padding: 0 0.5rem 4rem 0.5rem;
 }
 
 .body.bottom-row h4 {
   background-color: Black;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  padding: 1rem 0 1rem 1rem;
   text-align: left;
 }
 
@@ -164,8 +162,6 @@ footer {
 
   .top-row.left,
   .top-row.right {
-    display: flex;
-    flex-flow: column;
     width: 47%;
   }
 
